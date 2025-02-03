@@ -1,0 +1,21 @@
+body{
+    margin:0;
+}
+:root{
+    --fonte:arial;
+    --corTerciaria:#F2EBDF;
+    --corSecundaria: #AAA9D6;
+    --corPrimaria: #4D2F59;
+}
+.fundo_barra_navegaçao{
+    background-color: #AAA9D6;
+    height: 100px;
+}
+header{
+    background-color: var(--corSecundaria);
+    height: 80px;
+    text-align: right;
+}
+.menu{
+    padding: 30px;
+}
