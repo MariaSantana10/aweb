@@ -16,19 +16,33 @@ body{
 header{
     background-color: var(--corSecundaria);
     height: 80px;
-    text-align: right;
 }
+
 .nav{
     padding: 30px;
     font-family: var(--fonte30);
+    text-align: right;
 }
 .nav a{
     margin-right: 2%;
     text-decoration: none;
-    color:#F2E6CE;
+    color: var(--corTerciaria);
     font-size:20px;
+  
 }
 .nav a:hover{
     color:var(--corQuatro);
-    border-top: 4px solid var(--corQuatro)
+    border-top: 4px solid var(--corQuatro);
+    font-weight: bold;
+}
+.contact-btn{
+    background: var(--corTerciaria);
+    padding: 10px 20px;
+    color:#FFF8D9;
+    border-radius: 5px;
+
+}
+.contact-btn:hover{
+    background:var(--corQuatro);
+    color: var(--corPrimaria); 
 }
