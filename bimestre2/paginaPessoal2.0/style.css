@@ -1,7 +1,3 @@
-body{
-    margin:0;
-    background-color: var(--corPrimaria);
-}
 :root{
     --fonte:arial;
     --corQuatro: #AAA9D6;
@@ -10,39 +6,169 @@ body{
     --corPrimaria: #4D2F59;
     --fonte10:arial;
     --fonte30:'Courier New', monospace;
-    --fonte60: 'Brush Script MT', cursive;
-
+    --fonte60: "Imperial Script", serif;
 }
-header{
+body {
+    margin: 0;
+    background: var(--corPrimaria);
+    padding-top: 50px;
+}
+.navbar {
     background-color: var(--corSecundaria);
-    height: 80px;
+    overflow: hidden;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
-
-.nav{
-    padding: 30px;
-    font-family: var(--fonte30);
-    text-align: right;
-}
-.nav a{
-    margin-right: 2%;
-    text-decoration: none;
+.logo {
+    float: left;
     color: var(--corTerciaria);
-    font-size:20px;
-  
+    font-size: 20px;
+    font-weight: bold;
+    padding: 14px 20px;
 }
-.nav a:hover{
+.navbar ul {
+    margin: 5px;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+.navbar li {
+    float: left;
+    font-family: var(--fonte30);
+}
+.navbar li a {
+    display: inline-block;
+    color: var(--corTerciaria);
+    text-decoration: none;
+    padding: 14px 20px;
+    margin-right: 5px;
+}
+.navbar li a:hover {
     color:var(--corQuatro);
     border-top: 4px solid var(--corQuatro);
-    font-weight: bold;
 }
 .contact-btn{
     background: var(--corTerciaria);
     padding: 10px 20px;
-    color:#FFF8D9;
+    color:var(--corTerciaria);
     border-radius: 5px;
-
+    margin-right: 5px;
+    
 }
 .contact-btn:hover{
     background:var(--corQuatro);
     color: var(--corPrimaria); 
+}
+.hero {
+    height: 80vh;
+    background-color: var(--corPrimaria);
+    position: relative; /* Garante que o z-index funcione se necessário */
+    z-index: 1; /* Um valor menor que a navbar */
+}
+.hero-text {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: var(--corTerciaria);
+}
+.hero-text h1 {
+    font-size: 100px;
+    margin: 0;
+    font-family: var(--fonte60);
+    text-shadow: 3px 3px 3px #ababab;
+}
+.hero-text p {
+    font-size: 20px;
+    margin-right: 5%;
+}
+.hero-image {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+.hero-image img {
+    width: 100%;
+    border-radius: 10%;
+}
+.intro{
+    height: 90vh;
+    background-color: var(--corSecundaria);
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.textIntro {
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--corQuatro);
+    font-family: var(--fonte30);
+}
+.ftIntro-container {
+    width: 100%;
+    position: relative;
+}
+.ftIntro {
+    position: relative;
+    white-space: nowrap;
+}
+
+.ftIntro img {
+    display: inline-block;
+    border-radius: 10px;
+    vertical-align: middle;
+    margin-top: 2%;
+}
+
+.ftIntro img.center {
+    width: 30%;
+    transform: scale(1);
+}
+
+.ftIntro img.side {
+    width: 15%;
+    opacity: 0.8;
+}
+.descricao{
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--corTerciaria);
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    height: 100vh;
+    background-color: var(--corSecundaria);
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.historico{
+    width: 80%;
+    margin-left: 10%;
+}
+.historico th, td {
+    text-align: center;
+    padding: 8px;
+    border: 2px solid var(--corQuatro);
+}
+.historico th {
+    background-color: var(--corQuatro);
+    color: var(--corPrimaria)
+}
+.historico td{
+    color: var(--corTerciaria);
 }
