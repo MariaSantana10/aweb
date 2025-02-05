@@ -1,3 +1,4 @@
+/* FORMATAÇÃO GERAL */
 :root{
     --fonte:arial;
     --corQuatro: #AAA9D6;
@@ -13,6 +14,8 @@ body {
     background: var(--corPrimaria);
     padding-top: 50px;
 }
+
+/* BARRA DE NAVEGAÇÃO */
 .navbar {
     background-color: var(--corSecundaria);
     overflow: hidden;
@@ -63,6 +66,8 @@ body {
     background:var(--corQuatro);
     color: var(--corPrimaria); 
 }
+
+/* HERO - PAGINA INICIAL */
 .hero {
     height: 80vh;
     background-color: var(--corPrimaria);
@@ -98,6 +103,8 @@ body {
     width: 100%;
     border-radius: 10%;
 }
+
+/* INTRODUÇÃO - FALANDO SOBRE MIM */
 .intro{
     height: 90vh;
     background-color: var(--corSecundaria);
@@ -121,19 +128,16 @@ body {
     position: relative;
     white-space: nowrap;
 }
-
 .ftIntro img {
     display: inline-block;
     border-radius: 10px;
     vertical-align: middle;
     margin-top: 2%;
 }
-
 .ftIntro img.center {
     width: 30%;
     transform: scale(1);
 }
-
 .ftIntro img.side {
     width: 15%;
     opacity: 0.8;
@@ -147,7 +151,8 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-.container{
+/* FORMATAÇÃO HISTORICO */
+.historico_container{
     height: 100vh;
     background-color: var(--corSecundaria);
     margin-left: 10%;
@@ -171,4 +176,43 @@ body {
 }
 .historico td{
     color: var(--corTerciaria);
+}
+
+/* FORMATAÇÃO CARDS */
+.card_container{
+    height: 80vh;
+    background-color: var(--corSecundaria);
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.card {
+    width: 15%;
+    background-color: var(--corPrimaria);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: inline-block;  /* Usando inline-block para alinhar os cards */
+    text-align: center;
+    padding: 20px;
+    vertical-align: top;  /* Para garantir que os cards se alinhem corretamente */
+    transition: transform 0.3s ease-in-out;
+}
+.card img {
+    width: 80%;
+    border-radius: 8px;
+}
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--corQuatro);
+}
+.card p {
+    color: var(--corTerciaria);
+    font-size: 14px;
+}
+.card:hover {
+    transform: translateY(-10px);
 }
