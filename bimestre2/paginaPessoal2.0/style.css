@@ -106,7 +106,7 @@ body {
 
 /* INTRODUÇÃO - FALANDO SOBRE MIM */
 .intro{
-    height: 90vh;
+    height: 70vh;
     background-color: var(--corSecundaria);
     margin-left: 10%;
     margin-right: 10%;
@@ -178,9 +178,9 @@ body {
     color: var(--corTerciaria);
 }
 
-/* FORMATAÇÃO CARDS */
+/* FORMATAÇÃO CARDS CURIOSIDADES */
 .card_container{
-    height: 80vh;
+    height: 60vh;
     background-color: var(--corSecundaria);
     margin-left: 10%;
     margin-right: 10%;
@@ -193,7 +193,7 @@ body {
     background-color: var(--corPrimaria);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    margin: 5px;
     display: inline-block;  /* Usando inline-block para alinhar os cards */
     text-align: center;
     padding: 20px;
@@ -215,4 +215,62 @@ body {
 }
 .card:hover {
     transform: translateY(-10px);
+}
+
+/* FORMATAÇÃO HABI - VIVENCIAS */
+
+.container_Hab{
+    height: 30vh;
+    background-color: var(--corSecundaria);
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.card_Hab {
+    width: 15%;
+    background-color: var(--corPrimaria);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+    display: inline-block;  /* Usando inline-block para alinhar os cards */
+    text-align: center;
+    padding: 20px;
+    vertical-align: top;  /* Para garantir que os cards se alinhem corretamente */
+    transition: transform 0.3s ease-in-out;
+}
+.card_Hab p {
+    color: var(--corTerciaria);
+    font-size: 14px;
+}
+.card_Hab:hover {
+    transform: translateY(-10px);
+}
+
+.container_vive{
+    height: 50vh;
+    background-color: var(--corSecundaria);
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+}
+.imagem {
+    float: left;
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+.texto {
+    overflow: hidden;
+    text-align: left; /* Garante que o texto se ajuste corretamente ao lado da imagem */
+}
+.texto p {
+    color: var(--corTerciaria);
+    line-height:1.0;
+    font-size: 20px;
 }
