@@ -106,7 +106,7 @@ body {
 
 /* INTRODUÇÃO - FALANDO SOBRE MIM */
 .intro{
-    height: 70vh;
+    height: 90vh;
     background-color: var(--corSecundaria);
     margin-left: 10%;
     margin-right: 10%;
@@ -180,7 +180,7 @@ body {
 
 /* FORMATAÇÃO CARDS CURIOSIDADES */
 .card_container{
-    height: 60vh;
+    height: 90vh;
     background-color: var(--corSecundaria);
     margin-left: 10%;
     margin-right: 10%;
@@ -220,7 +220,7 @@ body {
 /* FORMATAÇÃO HABI - VIVENCIAS */
 
 .container_Hab{
-    height: 30vh;
+    height: 40vh;
     background-color: var(--corSecundaria);
     margin-left: 10%;
     margin-right: 10%;
@@ -249,7 +249,7 @@ body {
 }
 
 .container_vive{
-    height: 50vh;
+    height: 60vh;
     background-color: var(--corSecundaria);
     margin-left: 10%;
     margin-right: 10%;
@@ -273,4 +273,26 @@ body {
     color: var(--corTerciaria);
     line-height:1.0;
     font-size: 20px;
+}
+
+/* FROMATAÇÃO FOOTER - CONTATO */
+footer {
+    background: linear-gradient(to top, var(--corPrimaria), var(--corSecundaria), var(--corQuatro));
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact-info {
+    margin-bottom: 15px;
+}
+.contact-info p {
+    margin: 5px 0;
 }
