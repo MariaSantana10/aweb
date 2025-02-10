@@ -2,7 +2,7 @@
     --corPrimaria: #4D2F59; 
     --corSecundaria: #684073;  
     --corTerciaria: #F2EBDF;  
-    --corQuatro: #F2EBDF; 
+    --corQuatro: #AAA9D6; 
     --fonte10:arial;
     --fonte30: 'Courier New', monospace;
     --fonte60: "Imperial Script", serif;
@@ -24,37 +24,36 @@ body{
     grid-template-rows: auto;
     grid-gap: 10px;
     padding-top: 50px;  /* Ajuste para evitar que o conteúdo fique embaixo da navbar fixa */
+    border: 4px solid #AAA9D6;
 }
 
 /* HEADER */
+
+.logo {
+    float: left;
+    color: var(--corTerciaria);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 14px 20px;
+}
 .navbar{
     grid-column: 1 / -1; /* O header ocupa toda a largura */
     display: grid;
     grid-template-columns: 3fr 9fr; /* Logo à esquerda, links à direita */
     align-items: center;
-    height: 80px; /* Altura do header */
+    height: 100px; /* Altura do header */
     background-color: var(--corSecundaria);
     padding: 0 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
 
 }
-
-.logo {
-    float: left;
-    color: var(--corTerciaria);
-    font-size: 20px;
-    font-weight: bold;
-    padding: 14px 20px;
-}
-
 .nav-links {
     display: flex;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 30px;
     
 }
 
@@ -64,12 +63,12 @@ body{
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .nav-item .nav-icon {
-    width: 24px; /* Tamanho das imagens */
-    height: 24px;
+    width: 40px; /* Tamanho das imagens */
+    height: 40px;
     object-fit: contain;
 }
 
@@ -78,6 +77,11 @@ body{
     border-top: 4px solid var(--corQuatro);
 }
 
+
+
+
+
+
 /* HERO */
 .hero {
     grid-column: 1 / -1; /* O hero ocupa toda a largura */
@@ -85,17 +89,23 @@ body{
     grid-template-columns: 6fr 6fr; /* 50% para imagem e 50% para o texto */
     align-items: center;
     height: 100vh; /* Altura total do viewport */
-    background-color: #f4f4f4;
+    width: 100%;
     padding: 0 20px;
 }
 
 .hero-text {
     padding: 50px;
+    border: 4px solid #AAA9D6;
+    color: var(--corTerciaria);
+    
+    
 }
 
 .hero-text h1 {
-    font-size: 3em;
+    font-size: 80px;
     margin-bottom: 20px;
+    font-family: var(--fonte60);
+    text-shadow: 3px 3px 3px #ababab;
 }
 
 .hero-text p {
@@ -106,4 +116,10 @@ body{
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    border: 4px solid #AAA9D6;
+    width: 30%;
 }
