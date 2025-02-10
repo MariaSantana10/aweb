@@ -1,0 +1,131 @@
+:root {
+    --fonte: arial;
+    --corQuatro: #AAA9D6;
+    --corTerciaria: #F2EBDF;
+    --corSecundaria: #684073;
+    --corPrimaria: #4D2F59;
+    --fonte10: arial;
+    --fonte30: 'Courier New', monospace;
+    --fonte60: "Imperial Script", serif;
+}
+
+body {
+    margin: 0;
+    background: var(--corPrimaria);
+    font-family: var(--fonte);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+/* HEADER */
+.header {
+    grid-column: span 12;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--corSecundaria);
+    padding: 10px 20px;
+    height: 100px;
+}
+
+.logo {
+    color: var(--corTerciaria);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--corTerciaria);
+    font-family: var(--fonte30);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar a:hover {
+    color: var(--corQuatro);
+    border-top: 4px solid var(--corQuatro);
+}
+
+/* HERO */
+.hero {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.hero-text {
+    grid-column: span 6;
+    color: var(--corTerciaria);
+}
+
+.hero-image {
+    grid-column: span 6;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* SOBRE MIM */
+.sobre-mim {
+    grid-column: span 8;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.sobre-mim h2 {
+    text-align: left;
+    color: var(--corTerciaria);
+}
+
+/* CURIOSIDADES */
+.curiosidades {
+    grid-column: span 8;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.curiosidades h2 {
+    text-align: left;
+    color: var(--corTerciaria);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    background-color: var(--corPrimaria);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    grid-column: span 12;
+    background: linear-gradient(to top, var(--corPrimaria), var(--corSecundaria), var(--corQuatro));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
