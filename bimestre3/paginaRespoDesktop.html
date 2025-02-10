@@ -1,67 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Maria Santana</title>
-    <link rel="stylesheet" href="/bimestre3/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout com Grid</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <nav class="navbar">
+  <!-- HEADER -->
+    <header class="navbar">
         <div class="logo">❥ⓂⒸⓈ</div>
-        <ul>
-            <li><a href="#curiosidades">CURIOSIDADES</a></li>
-            <li><a href="#habilidades">HABILIDADES</a></li>
-            <li><a href="#casos">VIVÊNCIAS</a></li>
-            <li><a href="#educacao">HISTÓRICO ESCOLAR</a></li>
-            <li><a href="#contatos">CONTATOS</a></li>
-            <li><a href="/index.html" class="contact-btn">MENU</a></li>
-        </ul>
-    </nav>
-    
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Maria Clara</h1>
-            <p>Bem-vindo ao meu blog! Aqui, vou compartilhar um pouco sobre mim, minhas experiências e pensamentos.</p>
-        </div>
-        <div class="hero-image">
-            <img src="./foto2/ft1.png" alt="Minha Foto">
-        </div>
-    </section>
-    
-    <section class="intro">
-        <h1 class="textIntro">SOBRE MIM</h1>
-        <div class="ftIntro-container">
-            <div class="ftIntro">
-                <img src="./foto2/ftIntro1.jpg" alt="Imagem 1" class="side">
-                <img src="./foto2/ftIntro3.jpg" alt="Imagem 2" class="center">
-                <img src="./foto2/ftIntro2.jpg" alt="Imagem 3" class="side">
-            </div>
-            <p class="descricao">Olá! Eu me chamo Maria Clara, tenho 18 anos e sou apaixonada por livros.</p>
-        </div>
-    </section>
-    
-    <section class="card_container" id="curiosidades">
-        <h1 class="textIntro">CURIOSIDADES</h1>
-        <div class="cards-wrapper">
-            <div class="card"><h3>Curiosidade 1</h3><img src="./foto2/cardAnimais.png" alt="Imagem 1"><p>Amo animais, principalmente cachorros.</p></div>
-            <div class="card"><h3>Curiosidade 2</h3><img src="./foto2/cardAcademia.png" alt="Imagem 2"><p>Amo fazer musculação.</p></div>
-            <div class="card"><h3>Curiosidade 3</h3><img src="./foto2/cardMusica.png" alt="Imagem 3"><p>Sou fã de Michael Jackson.</p></div>
-            <div class="card"><h3>Curiosidade 4</h3><img src="./foto2/cardLivro.png" alt="Imagem 4"><p>Amo livros.</p></div>
-            <div class="card"><h3>Curiosidade 5</h3><img src="./foto2/cardSono.png" alt="Imagem 5"><p>Sou sonâmbula, mas não abro portas.</p></div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <p><strong>EMAIL:</strong> c.santana@escolar.ifrn.edu.br</p>
-                <p><strong>GITHUB:</strong> <a href="https://github.com/MariaSantana10">MariaSantana10</a></p>
-                <p><strong>INSTAGRAM:</strong> <a href="https://www.instagram.com/mariaa_santana10">mariaa_santana10</a></p>
-            </div>
-            <p>&copy; 2025 Blog Maria Santana. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+        <nav class="nav-links">
+        <a href="#sobre" class="nav-item">
+            <img src="./fotosResponsivo/mim.png" alt="Ícone Sobre" class="nav-icon"> SOBRE MIM
+        </a>
+        <a href="#curiosidades" class="nav-item">
+            <img src="./fotosResponsivo/curi.png" alt="Ícone Curiosidades" class="nav-icon"> CURIOSIDADES
+        </a>
+        <a href="#contato" class="nav-item">
+            <img src="./fotosResponsivo/contato.png" alt="Ícone Contato" class="nav-icon"> CONTATO
+        </a>
+        </nav>
+    </header>
 </body>
 </html>
