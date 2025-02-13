@@ -1,3 +1,4 @@
+/* CONFIGURAÇÃO GERAL */
 :root {
     --corPrimaria: #4D2F59; 
     --corSecundaria: #684073;  
@@ -7,14 +8,12 @@
     --fonte30: 'Courier New', monospace;
     --fonte60: "Imperial Script", serif;
 }
-
 /* Resetando margens e padding */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Corpo da página */
 body{
     font-family: var(--fonte30);
@@ -27,7 +26,6 @@ body{
 }
 
 /* HEADER */
-
 .logo {
     float: left;
     color: var(--corTerciaria);
@@ -35,7 +33,8 @@ body{
     font-weight: bold;
     padding: 14px 20px;
 }
-.navbar{
+.navbar{ 
+    /* isso aq são as dimensoes do header */
     grid-column: 1 / -1; /* O header ocupa toda a largura */
     display: grid;
     grid-template-columns: 3fr 9fr; /* Logo à esquerda, links à direita */
@@ -55,7 +54,6 @@ body{
     justify-content: flex-end;
     gap: 30px;
 }
-
 .nav-item {
     color: var(--corTerciaria);
     text-decoration: none;
@@ -64,13 +62,11 @@ body{
     gap: 8px;
     font-size: 18px;
 }
-
 .nav-item .nav-icon {
     width: 35px; /* Tamanho das imagens */
     height: 35px;
     object-fit: contain;
 }
-
 .nav-item:hover {
     color: var(--corQuatro);
     border-top: 4px solid var(--corQuatro);
@@ -79,6 +75,7 @@ body{
 
 /* HERO */
 .hero {
+    /* isso aq são as dimensoes do hero, onde vai ficar o titulo com os textos pequenos e a imagem */
     grid-column: 1 / -1; /* O hero ocupa toda a largura */
     display: grid;
     grid-template-columns: 6fr 6fr; /* 50% para imagem e 50% para o texto */
@@ -87,7 +84,6 @@ body{
     width: 100%;
     position: relative;
 }
-
 .hero-text {
     padding: 50px;
     border: 4px solid #AAA9D6;
@@ -96,18 +92,15 @@ body{
     
     
 }
-
 .hero-text h1 {
     font-size: 80px;
     margin-bottom: 20px;
     font-family: var(--fonte60);
     text-shadow: 3px 3px 3px #ababab;
 }
-
 .hero-text p {
     font-size: 20px;
 }
-
 .hero-image img {
     position: absolute;
     transform: translateY(-50%);
@@ -116,4 +109,68 @@ body{
     border-radius: 10%;
     z-index: 5;
     
+}
+
+/* SOBRE MIM */
+.intro{
+    background-color: var(--corSecundaria);
+    grid-column: 3 / 11; /* Faz com que o conteúdo ocupe 8 colunas no grid */
+    display: grid;
+    align-items: center;
+    height: 70vh; /* Altura total do viewport */
+    width: 100%;
+    position: relative;
+    border: 4px solid var(--corTerciaria);
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textIntro {
+    font-size: 40px;
+    font-weight: normal;
+    color: var(--corQuatro);
+    font-family: var(--fonte30);
+    margin-top: 100px;
+    text-align: left;
+    grid-column: 1 / 5;
+}
+.ftIntro-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre as imagens */
+    margin-top: 20px; /* Espaço entre o título e as imagens */
+}
+.ftIntro {
+    position: relative;
+    white-space: nowrap;
+    display: flex; /* Flexbox para alinhar as imagens */
+    justify-content: center; /* Alinha as imagens no centro */
+    align-items: center; /* Alinha as imagens verticalmente no centro */
+    gap: 10px; /* Adiciona espaçamento entre as imagens */
+    max-width: 80%; /* Faz as imagens ficarem centralizadas e limitadas à largura */
+}
+.ftIntro img {
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.ftIntro img.center {
+    width: 30%;
+    transform: scale(1);
+}
+.ftIntro img.side {
+    width: 30%;
+    opacity: 0.8;
+}
+.descricao{
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--corTerciaria);
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1 / -1; /* Faz a descrição ocupar toda a largura do grid (8 colunas) */
 }
