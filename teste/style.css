@@ -130,7 +130,7 @@ body{
     font-weight: normal;
     color: var(--corQuatro);
     font-family: var(--fonte30);
-    margin-top: 100px;
+    margin-top: 10px;
     text-align: left;
     grid-column: 1 / 5;
 }
@@ -144,8 +144,6 @@ body{
     margin-top: 20px; /* Espaço entre o título e as imagens */
 }
 .ftIntro {
-    position: relative;
-    white-space: nowrap;
     display: flex; /* Flexbox para alinhar as imagens */
     justify-content: center; /* Alinha as imagens no centro */
     align-items: center; /* Alinha as imagens verticalmente no centro */
@@ -161,7 +159,7 @@ body{
     transform: scale(1);
 }
 .ftIntro img.side {
-    width: 30%;
+    width: 15%;
     opacity: 0.8;
 }
 .descricao{
