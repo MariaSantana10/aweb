@@ -120,19 +120,19 @@ body{
     height: 70vh; /* Altura total do viewport */
     width: 100%;
     position: relative;
-    border: 4px solid var(--corTerciaria);
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
 .textIntro {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: normal;
     color: var(--corQuatro);
     font-family: var(--fonte30);
     margin-top: 10px;
     text-align: left;
     grid-column: 1 / 5;
+    margin-left: 30px;
 }
 .ftIntro-container {
     width: 100%;
@@ -151,16 +151,10 @@ body{
     max-width: 80%; /* Faz as imagens ficarem centralizadas e limitadas à largura */
 }
 .ftIntro img {
+    width: 30%; /* Todas as imagens terão o mesmo tamanho (30% da largura do contêiner) */
+    height: auto; /* Mantém a proporção original da imagem */
     border-radius: 10px;
     vertical-align: middle;
-}
-.ftIntro img.center {
-    width: 30%;
-    transform: scale(1);
-}
-.ftIntro img.side {
-    width: 15%;
-    opacity: 0.8;
 }
 .descricao{
     margin-top: 20px;
@@ -171,4 +165,61 @@ body{
     margin-left: auto;
     margin-right: auto;
     grid-column: 1 / -1; /* Faz a descrição ocupar toda a largura do grid (8 colunas) */
+}
+
+/* CURIOSIDADES */
+
+
+/* SEÇÃO CURI */
+.curi {
+    background-color: var(--corSecundaria);
+    grid-column: 3 / 11; /* Faz com que o conteúdo ocupe 8 colunas no grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+    gap: 10px; /* Gap de 10px entre os cards */
+    align-items: center;
+    height: auto; /* Ajusta a altura automaticamente para acomodar os cards */
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+/* CARDS INDIVIDUAIS */
+.card {
+    background-color: var(--corPrimaria);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Usando flexbox para o conteúdo do card */
+    flex-direction: column; /* Organiza o conteúdo do card de forma vertical */
+    align-items: center; /* Centraliza o conteúdo do card */
+    justify-content: space-between; /* Espaça o conteúdo do card */
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* IMAGEM DO CARD */
+.card img {
+    width: 80%; /* A imagem ocupa 80% da largura do card */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* TÍTULO E DESCRIÇÃO */
+.card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--corQuatro);
+}
+
+.card p {
+    color: var(--corTerciaria);
+    font-size: 14px;
+}
+
+/* EFEITO DE HOVER NOS CARDS */
+.card:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
 }
