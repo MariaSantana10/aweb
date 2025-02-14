@@ -270,3 +270,177 @@ footer {
     color: var(--corQuatro); /* Cor ao passar o mouse */
 }
 
+
+/* MEDIA QUERY PARA TELAS MENORES (390x844) */
+@media (max-width: 390px) {
+      /* Configuração geral para mobile */
+      body {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas para mobile */
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 10px;
+    }
+
+    /* HEADER */
+    .navbar {
+        grid-column: 1 / -1; /* Ocupa todas as 4 colunas */
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px; /* Altura fixa */
+        width: 90%; /* Largura de 90% */
+        background-color: var(--corSecundaria);
+        position: fixed;
+        bottom: 0; /* Fixo na base do viewport */
+        left: 5%; /* Centralizado */
+        border-radius: 10px; /* Bordas arredondadas */
+        z-index: 10; /* Garante que o header fique acima de outros elementos */
+        grid-template-columns: 1fr 3fr; /* Logo à esquerda, links à direita */
+        padding: 0 20px;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateX();
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 20px; /* Espaçamento entre os ícones */
+    }
+
+    .nav-item {
+        color: var(--corTerciaria);
+        text-decoration: none;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-item .nav-icon {
+        width: 35px; /* Tamanho dos ícones */
+        height: 35px;
+        object-fit: contain;
+    }
+
+    .nav-item:hover {
+        color: var(--corQuatro);
+        border-top: 4px solid var(--corQuatro);
+    }
+
+    /* HERO */
+    .hero {
+        grid-column: 1 / -1; /* Ocupa todas as 4 colunas */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Altura ajustável */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 36px; /* Tamanho menor para mobile */
+    }
+
+    .hero-image img {
+        width: 80%; /* Imagem menor para mobile */
+        position: static;
+        transform: none;
+    }
+
+    /* SOBRE MIM */
+    .intro {
+        grid-column: 1 / -1; /* Ocupa todas as 4 colunas */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin-top: 100px; /* Distância do hero */
+    }
+
+    .textIntro {
+        font-size: 26px; /* Tamanho menor para mobile */
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .ftIntro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ftIntro img {
+        width: 80%; /* Imagens menores para mobile */
+        margin-bottom: 10px;
+    }
+
+    .descricao {
+        font-size: 16px; /* Tamanho menor para mobile */
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    /* CURIOSIDADES */
+    .curi {
+        grid-column: 1 / -1; /* Ocupa todas as 4 colunas */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin-top: 100px; /* Distância do sobre mim */
+    }
+
+    .textCuri {
+        font-size: 26px; /* Tamanho menor para mobile */
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .card {
+        text-align: center;
+        padding: 15px;
+        width: 100%; /* Cards ocupam toda a largura */
+    }
+
+    .card img {
+        width: 50%; /* Imagens menores para mobile */
+    }
+
+    /* FOOTER */
+    footer {
+        grid-column: 1 / -1; /* Ocupa todas as 4 colunas */
+        width: 100%;
+        height: auto; /* Altura ajustável */
+        background-color: var(--corSecundaria);
+        margin-top: 100px; /* Distância do último card */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 12px; /* Tamanho menor para mobile */
+    }
+
+    .footer-icons {
+        display: flex;
+        flex-direction: column; /* Ícones em coluna */
+        gap: 10px; /* Espaçamento entre os ícones */
+    }
+
+    .footer-icons a {
+        color: var(--corTerciaria);
+        font-size: 14px; /* Tamanho menor para mobile */
+        transition: color 0.3s;
+    }
+
+    .footer-icons a:hover {
+        color: var(--corQuatro);
+    }   
+}
