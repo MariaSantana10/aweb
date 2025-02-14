@@ -267,3 +267,38 @@ footer {
 .footer-icons a:hover {
     color: var(--corQuatro); /* Cor ao passar o mouse */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        min-height: 100vh;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .navbar {
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%; /* Define a largura para 90% */
+        height: 100px; /* Define a altura para 100px */
+        padding: 10px;
+        background-color: var(--corSecundaria);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px; /* Adiciona um pequeno arredondamento nas bordas */
+        
+    }

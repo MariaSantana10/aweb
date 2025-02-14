@@ -1,3 +1,4 @@
+/* CONFIGURAÇÃO GERAL */
 :root {
     --corPrimaria: #4D2F59; 
     --corSecundaria: #684073;  
@@ -7,14 +8,12 @@
     --fonte30: 'Courier New', monospace;
     --fonte60: "Imperial Script", serif;
 }
-
 /* Resetando margens e padding */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Corpo da página */
 body{
     font-family: var(--fonte30);
@@ -27,7 +26,6 @@ body{
 }
 
 /* HEADER */
-
 .logo {
     float: left;
     color: var(--corTerciaria);
@@ -35,7 +33,8 @@ body{
     font-weight: bold;
     padding: 14px 20px;
 }
-.navbar{
+.navbar{ 
+    /* isso aq são as dimensoes do header */
     grid-column: 1 / -1; /* O header ocupa toda a largura */
     display: grid;
     grid-template-columns: 3fr 9fr; /* Logo à esquerda, links à direita */
@@ -47,6 +46,7 @@ body{
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 10; /* Coloca o header acima de outros elementos */
 
 }
 .nav-links {
@@ -54,7 +54,6 @@ body{
     justify-content: flex-end;
     gap: 30px;
 }
-
 .nav-item {
     color: var(--corTerciaria);
     text-decoration: none;
@@ -63,33 +62,28 @@ body{
     gap: 8px;
     font-size: 18px;
 }
-
 .nav-item .nav-icon {
     width: 35px; /* Tamanho das imagens */
     height: 35px;
     object-fit: contain;
 }
-
 .nav-item:hover {
     color: var(--corQuatro);
     border-top: 4px solid var(--corQuatro);
 }
 
 
-
-
-
-
 /* HERO */
 .hero {
+    /* isso aq são as dimensoes do hero, onde vai ficar o titulo com os textos pequenos e a imagem */
     grid-column: 1 / -1; /* O hero ocupa toda a largura */
     display: grid;
     grid-template-columns: 6fr 6fr; /* 50% para imagem e 50% para o texto */
     align-items: center;
     height: 100vh; /* Altura total do viewport */
     width: 100%;
+    position: relative;
 }
-
 .hero-text {
     padding: 50px;
     border: 4px solid #AAA9D6;
@@ -98,23 +92,182 @@ body{
     
     
 }
-
 .hero-text h1 {
     font-size: 80px;
     margin-bottom: 20px;
     font-family: var(--fonte60);
     text-shadow: 3px 3px 3px #ababab;
 }
-
 .hero-text p {
+    margin-top: 10px;
     font-size: 20px;
 }
-
 .hero-image img {
+    margin-top: 10px;
     position: absolute;
     transform: translateY(-50%);
     border: 4px solid #AAA9D6;
     width: 40%;
     border-radius: 10%;
+    z-index: 5;
     
 }
+
+/* SOBRE MIM */
+.intro{
+    background-color: var(--corSecundaria);
+    grid-column: 3 / 11; /* Faz com que o conteúdo ocupe 8 colunas no grid */
+    display: grid;
+    align-items: center;
+    height: 70vh; /* Altura total do viewport */
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textIntro {
+    font-size: 50px;
+    font-weight: normal;
+    color: var(--corQuatro);
+    font-family: var(--fonte30);
+    margin-top: 10px;
+    text-align: left;
+    grid-column: 1 / 5;
+    margin-left: 30px;
+}
+.ftIntro-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    align-items: center;
+    gap: 10px; /* Espaçamento entre as imagens */
+    margin-top: 20px; /* Espaço entre o título e as imagens */
+}
+.ftIntro {
+    display: flex; /* Flexbox para alinhar as imagens */
+    justify-content: center; /* Alinha as imagens no centro */
+    align-items: center; /* Alinha as imagens verticalmente no centro */
+    gap: 10px; /* Adiciona espaçamento entre as imagens */
+    max-width: 80%; /* Faz as imagens ficarem centralizadas e limitadas à largura */
+}
+.ftIntro img {
+    width: 30%; /* Todas as imagens terão o mesmo tamanho (30% da largura do contêiner) */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.descricao{
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--corTerciaria);
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: 1 / -1; /* Faz a descrição ocupar toda a largura do grid (8 colunas) */
+}
+
+/* CURIOSIDADES */
+/* SEÇÃO CURI */
+.curi {
+    background-color: var(--corSecundaria);
+    grid-column: 3 / 11; /* Faz com que o conteúdo ocupe 8 colunas no grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+    gap: 10px; /* Gap de 10px entre os cards */
+    align-items: center;
+    height: auto; /* Ajusta a altura automaticamente para acomodar os cards */
+    width: 100%;
+    position: relative;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+/* TÍTULO - FICANDO ACIMA DOS CARDS */
+.textCuri{
+    font-size: 50px;
+    font-weight: normal;
+    color: var(--corQuatro);
+    font-family: var(--fonte30);
+    margin-bottom: 30px; /* Espaço abaixo do título para separar dos cards */
+    grid-column: 1 / -1; /* Faz o título ocupar todas as colunas */
+    text-align: left; 
+    margin-left: 30px;
+}
+
+/* CARDS INDIVIDUAIS */
+.card {
+    background-color: var(--corPrimaria);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Usando flexbox para o conteúdo do card */
+    flex-direction: column; /* Organiza o conteúdo do card de forma vertical */
+    align-items: center; /* Centraliza o conteúdo do card */
+    justify-content: space-between; /* Espaça o conteúdo do card */
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* IMAGEM DO CARD */
+.card img {
+    width: 30%; /* A imagem ocupa 80% da largura do card */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* TÍTULO E DESCRIÇÃO */
+.card h3 {
+    margin-top: 10px;
+    font-size: 25px;
+    color: var(--corQuatro);
+}
+
+.card p {
+    color: var(--corTerciaria);
+    font-size: 20px;
+    text-align: center;
+}
+
+/* EFEITO DE HOVER NOS CARDS */
+.card:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+}
+
+/* FOOTER */
+footer {
+    grid-column: 1 / -1; /* Faz com que o footer ocupe toda a largura do grid (12 colunas) */
+    width: 100%;
+    height: 200px;
+    background-color: var(--corSecundaria); /* Altere para a cor desejada */
+    margin-top: 100px; /* Distância de 100px dos cards */
+    text-align: center; /* Alinha o texto no centro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    font-size: 15px;
+    color: var(--corTerciaria); /* Altere para a cor do texto desejada */
+}
+
+/* Estilos para os ícones */
+.footer-icons {
+    display: flex;
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-top: 30px; /* Distância entre o texto e os ícones */
+}
+
+.footer-icons a {
+    color: var(--corTerciaria); /* Cor do ícone */
+    font-size: 25px; /* Tamanho do ícone */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.footer-icons a:hover {
+    color: var(--corQuatro); /* Cor ao passar o mouse */
+}
+
+
